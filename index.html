@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meme Galaxy</title>
+    <meta
+      name="description"
+      content="Meme Galaxy is a playful, responsive meme-browsing website with search, category filters, and favorites."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <nav class="main-nav" aria-label="Main">
+        <a class="brand" href="#" aria-label="Meme Galaxy home">
+          <span class="brand-logo" aria-hidden="true">🪐</span>
+          <span>Meme Galaxy</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#meme-gallery">Memes</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="hero" class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Fresh memes. Big laughs.</p>
+          <h1 id="hero-title">Find your next favorite meme in seconds.</h1>
+          <p>
+            Explore trending joke formats, filter by vibe, and tap the heart to
+            save your favorites for this session.
+          </p>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="Meme search and filters">
+        <div class="search-wrap">
+          <label for="search-input">Search memes</label>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Search by title or tags..."
+            autocomplete="off"
+          />
+        </div>
+
+        <fieldset class="category-fieldset">
+          <legend>Categories</legend>
+          <div id="category-controls" class="category-controls"></div>
+        </fieldset>
+      </section>
+
+      <section id="meme-gallery" aria-labelledby="gallery-title">
+        <div class="gallery-header">
+          <h2 id="gallery-title">Meme gallery</h2>
+          <p id="results-count" class="results-count" aria-live="polite"></p>
+        </div>
+
+        <div id="meme-grid" class="meme-grid" role="list"></div>
+        <p id="empty-state" class="empty-state" hidden>
+          No memes matched your search. Try another category or keyword.
+        </p>
+      </section>
+
+      <section id="about" class="about">
+        <h2>About Meme Galaxy</h2>
+        <p>
+          This demo uses local, CSS-generated placeholder artwork so you can
+          swap in your own memes later without changing the page structure.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Meme Galaxy · Built for laughs and learning.</p>
+      <p>Likes are local to your current browser session.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
